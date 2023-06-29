@@ -129,7 +129,14 @@ int main()
 		cout << "5. Exit" << endl;
 		cout << "\nEnter your choice(1-5)" << endl;
 
+		char ch;
+		cin >> ch;
+		cout << endl;
 
+		switch (ch)
+		{
+		case 1:
+		}
 		
 	}
 }
