@@ -53,5 +53,8 @@ public:
 		}
 	}
 
+	void search(string element, Node*& parrent, Node*& currentNode)
+	{
 
+	}
 };
