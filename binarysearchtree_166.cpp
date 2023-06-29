@@ -33,5 +33,13 @@ public:
 		NewNode->leftchild = NULL;	//MAKE THE LEFT CHILD OF THE NEWNODE POINT TO NULL
 		NewNode->rightchild = NULL;	//MAKE THE RIGHT CHILD OF THE NEW NODE POINT TO NULL
 
+		Node* parrent = NULL;
+		Node* currentNode = NULL;
+		search(element, parrent, currentNode);	//locate the node which will be the parrent of the node to be inserted
+
+		if (parrent == NULL) //if the parrent is null (tree is empty)
+		{
+			ROOT = newNode;	//mark the new node as ROOT
+		}
 	}
 };
