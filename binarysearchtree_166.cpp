@@ -23,5 +23,6 @@ public:
 
 	BinaryTree()
 	{
+		ROOT = NULL;   //INITIALIZING ROOT TO NULL
 	}
 };
