@@ -28,10 +28,10 @@ public:
 
 	void insert(string element) //insert a node to binary search tree
 	{
-		Node* NewNode =  new Node(element, NULL, NULL);  //ALCOATE MEMORY FOR THE NEW NODE
-		NewNode->info = element;	//assign value to the data field of the new node
-		NewNode->leftchild = NULL;	//MAKE THE LEFT CHILD OF THE NEWNODE POINT TO NULL
-		NewNode->rightchild = NULL;	//MAKE THE RIGHT CHILD OF THE NEW NODE POINT TO NULL
+		Node* newNode =  new Node(element, NULL, NULL);  //ALCOATE MEMORY FOR THE NEW NODE
+		newNode->info = element;	//assign value to the data field of the new node
+		newNode->leftchild = NULL;	//MAKE THE LEFT CHILD OF THE NEWNODE POINT TO NULL
+		newNode->rightchild = NULL;	//MAKE THE RIGHT CHILD OF THE NEW NODE POINT TO NULL
 
 		Node* parrent = NULL;
 		Node* currentNode = NULL;
@@ -41,5 +41,17 @@ public:
 		{
 			ROOT = newNode;	//mark the new node as ROOT
 		}
+		
+		if (element < parrent->info) //if the vlaue in the data field of the new node is less than that of the parrent
+		{
+			parrent->leftchild = newNode;	//make the left child of the parrent point to the New Node
+		}
+
+		else if (element > parrent->info) //if the value in the data field of the new node is greater than that of the parrent 
+		{
+			parrent->rightchild = newNode;	//make the right child of the parrent point to the new Node
+		}
 	}
+
+
 };
